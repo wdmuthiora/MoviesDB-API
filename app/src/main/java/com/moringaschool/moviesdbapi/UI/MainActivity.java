@@ -1,4 +1,4 @@
-package com.moringaschool.moviesdbapi;
+package com.moringaschool.moviesdbapi.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.moringaschool.moviesdbapi.R;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

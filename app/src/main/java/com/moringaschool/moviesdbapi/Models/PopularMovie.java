@@ -1,5 +1,5 @@
 
-package com.moringaschool.moviesdbapi;
+package com.moringaschool.moviesdbapi.Models;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
