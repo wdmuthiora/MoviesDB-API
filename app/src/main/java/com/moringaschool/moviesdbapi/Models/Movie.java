@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 import org.parceler.Generated;
 
-public class PopularMovie {
+public class Movie {
 
     @SerializedName("adult")
     @Expose
@@ -56,7 +56,7 @@ public class PopularMovie {
      * No args constructor for use in serialization
      * 
      */
-    public PopularMovie() {
+    public Movie() {
     }
 
     /**
@@ -76,7 +76,7 @@ public class PopularMovie {
      * @param adult
      * @param posterPath
      */
-    public PopularMovie(Boolean adult, String backdropPath, List<Integer> genreIds, Integer id, String originalLanguage, String originalTitle, String overview, Double popularity, String posterPath, String releaseDate, String title, Boolean video, Double voteAverage, Integer voteCount) {
+    public Movie(Boolean adult, String backdropPath, List<Integer> genreIds, Integer id, String originalLanguage, String originalTitle, String overview, Double popularity, String posterPath, String releaseDate, String title, Boolean video, Double voteAverage, Integer voteCount) {
         super();
         this.adult = adult;
         this.backdropPath = backdropPath;
