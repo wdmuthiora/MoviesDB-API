@@ -24,6 +24,7 @@ public class PopularMoviesAdapter extends RecyclerView.Adapter<PopularMoviesAdap
     private Context mContext;
     private List<Movie> mPopular;
 
+    //Constructor
     public PopularMoviesAdapter(Context mContext, List<Movie> mPopular) {
         this.mContext = mContext;
         this.mPopular = mPopular;
@@ -59,7 +60,7 @@ public class PopularMoviesAdapter extends RecyclerView.Adapter<PopularMoviesAdap
 
         private Context mContext;
 
-        //constructor
+        //constructor. Note, binding to the itemView.
         public PopularMoviesViewHolder(View itemView){
             //itemView is inherited from RecyclerView.ViewHolder class
             super(itemView);
