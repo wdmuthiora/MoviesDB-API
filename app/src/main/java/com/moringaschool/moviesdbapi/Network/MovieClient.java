@@ -10,7 +10,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MovieClient {
 
     private static Retrofit retrofit=null;
-//Using client to build Retrofit instance, that will in turn be used to query the api
+
+    //Using client to build Retrofit instance, that will in turn be used to query the api
+    //The Retrofit class generates an implementation of the GitHubService interface.
+
     public static MovieApi getClient(){
         if(retrofit==null){
             retrofit=new Retrofit.Builder().baseUrl(Constants.MOVIE_DB_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();

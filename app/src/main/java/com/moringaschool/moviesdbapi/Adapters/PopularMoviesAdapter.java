@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.moringaschool.moviesdbapi.Models.Movie;
+import com.moringaschool.moviesdbapi.Models.Result;
 import com.moringaschool.moviesdbapi.R;
 import com.squareup.picasso.Picasso;
 
@@ -22,10 +23,10 @@ import butterknife.ButterKnife;
 //CUSTOM ADAPTER
 public class PopularMoviesAdapter extends RecyclerView.Adapter<PopularMoviesAdapter.PopularMoviesViewHolder> {
     private Context mContext;
-    private List<Movie> mPopular;
+    private List<Result> mPopular;
 
-    //Constructor
-    public PopularMoviesAdapter(Context mContext, List<Movie> mPopular) {
+    //Constructor. It takes in context and an array, from MainActivity
+    public PopularMoviesAdapter(Context mContext, List<Result> mPopular) {
         this.mContext = mContext;
         this.mPopular = mPopular;
     }
@@ -68,12 +69,12 @@ public class PopularMoviesAdapter extends RecyclerView.Adapter<PopularMoviesAdap
         }
 
         //BIND PROPERTIES TO EACH MOVIE OBJECT
-        public void bindPopularMovies( Movie movie){
+        public void bindPopularMovies( Result movie){
             Picasso.get().load(movie.getPosterPath()).into(ivMovieImage);
             mReleaseDate.setText(movie.getReleaseDate());
             tvMovieTitle.setText(movie.getTitle());
             tvMovieDescription.setText(movie.getOverview());
-            tvMoviePopularity.setText(movie.getPopularity() + "/5");
+            tvMoviePopularity.setText(movie.getPopularity().toString());
         }
     }
 
